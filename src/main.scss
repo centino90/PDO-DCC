@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========== NAVIGATIONS
+====================
+*/
+
+/* STEPS */
+.step {
+    @apply w-1/4;
+
+    .step-label {
+        @apply text-xs text-center md:text-base text-secondary-300;
+    
+        &.current {
+            @apply text-black;
+        }
+    }
+    .step-separator {
+        @apply relative mb-2;
+    }
+    .step-separator-container {
+        @apply absolute 
+        flex items-center align-middle content-center;
+    
+        width: calc(100% - 2.5rem - 1rem); 
+        top: 50%; 
+        transform: translate(-50%, -50%);
+    }
+    .step-separator-outline {
+        @apply 
+        w-full rounded
+        bg-secondary-200 
+        items-center align-middle flex-1;
+    }
+    .step-separator-bg {
+        @apply 
+        w-0 rounded
+        bg-success-300 
+        py-1;
+    
+        &.full {
+           @apply w-full;
+        }
+    }
+    .step-icon {
+        @apply 
+        w-10 h-10 
+        mx-auto 
+        bg-white 
+        border-2 border-secondary-200 
+        rounded-full 
+        text-lg
+        flex items-center;
+    
+        &.current {
+            @apply bg-success-500 border-0;
+        }
+        &.done {
+            @apply bg-success-400 border-0;
+        }
+    }
+    .step-icon-content {
+        @apply 
+        text-center text-secondary-600 
+        w-full;
+    
+        &.current {
+            @apply text-white;
+        }
+    }
+}
+
+/* =========== FORMS
+====================
+*/
+.form-group {
+    @apply
+    flex flex-wrap 
+    rounded-md
+}   
+.form-label {
+    @apply 
+    whitespace-nowrap block 
+    text-sm font-bold text-secondary-700
+}
+.form-input {
+    @apply 
+    block w-full rounded-md 
+    border-secondary-300 focus:border-primary-500 
+    sm:text-sm 
+    focus:ring-primary-500 
+}
+.form-input-err {
+    @apply 
+    text-sm text-danger-500 
+    px-2 pt-2
+}
+
+.form-btn {
+    @apply 
+    flex justify-center items-center 
+    border border-transparent 
+    hover:bg-primary-600
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500
+    font-bold 
+    rounded-md;
+}

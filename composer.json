@@ -1,0 +1,12 @@
+{
+    "name": "aj/shareposts",
+    "authors": [
+        {
+            "name": "centino90",
+            "email": "anthonyjayansit2326282@gmail.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.0"
+    }
+}
